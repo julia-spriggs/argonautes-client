@@ -10,13 +10,8 @@ function AddArgonaut(props) {
     e.preventDefault();
     const requestBody = { name: name };
 
-    // Get the token from localStorage
-    const storedToken = localStorage.getItem("authToken");
-
-    // Send token through the request "authorization" headers
     axios
       .post(`${API_URL}/api/argonauts`, requestBody, {
-        headers: { Authorization: `Bearer ${storedToken}` },
       })
       .then((response) => {
         // Reset the state
