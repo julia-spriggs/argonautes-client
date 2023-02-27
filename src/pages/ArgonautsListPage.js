@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddArgonaut from '../components/AddArgonaut';
+import ArgonautDetails from '../components/ArgonautDetails';
 
 const API_URL = 'http://localhost:5005';
 
@@ -25,9 +26,9 @@ function ArgonautsListPage() {
         <div>
             <h1>Les Argonautes</h1>
             <AddArgonaut refreshArgonauts={getAllArgonauts} />
-            {argonauts.map((argonaut) => {
-                <ArgonautsListPage {...argonaut} />
-            })}
+            {argonauts.map((argonaut) => (
+                <ArgonautDetails {...argonaut} />
+            ))}
     
         </div>
     );
