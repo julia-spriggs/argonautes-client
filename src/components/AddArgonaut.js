@@ -22,19 +22,21 @@ function AddArgonaut(props) {
   };
 
   return (
-    <div>
+    <div className="add">
       <h2>Ajouter un(e) Argonaute</h2>
 
       <form onSubmit={handleSubmit}>
-        <label>Nom de l'argonaute:</label>
+        <label className="form">Nom de l'argonaute:</label>
         <input
+          className="form"
           type="text"
           name="name"
+          placeholder="Charalampos"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
 
-        <button type="submit">Envoyer</button>
+        <button className="form" type="submit">Envoyer</button>
       </form>
     </div>
   );

@@ -1,7 +1,7 @@
 function ArgonautDetails ( { name } ) {
     return (
-        <div>
-            <h4>{name}</h4>
+        <div className="names">
+            <h3>{name}</h3>
         </div>
     );
 }
