@@ -11,7 +11,7 @@ function AddArgonaut(props) {
     const requestBody = { name: name };
 
     axios
-      .post(`${API_URL}/api/argonauts`, requestBody, {
+      .post(`${API_URL}/api/`, requestBody, {
       })
       .then((response) => {
         // Reset the state

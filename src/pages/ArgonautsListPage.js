@@ -10,7 +10,7 @@ function ArgonautsListPage() {
 
   const getAllArgonauts = () => {
     axios
-      .get(`${API_URL}/api/argonauts`)
+      .get(`${API_URL}/api/`)
       .then((response) => setArgonauts(response.data))
       .catch((error) => console.log(error));
   };
