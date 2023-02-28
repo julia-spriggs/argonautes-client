@@ -3,14 +3,12 @@ import axios from "axios";
 import AddArgonaut from "../components/AddArgonaut";
 import ArgonautDetails from "../components/ArgonautDetails";
 
-const API_URL = "http://localhost:5005";
-
 function ArgonautsListPage() {
   const [argonauts, setArgonauts] = useState([]);
 
   const getAllArgonauts = () => {
     axios
-      .get(`${API_URL}/api/`)
+      .get(`${process.env.REACT_APP_API_URL}/api/`)
       .then((response) => setArgonauts(response.data))
       .catch((error) => console.log(error));
   };
